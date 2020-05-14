@@ -171,3 +171,51 @@ TRUE != FALSE # evaluates to TRUE because they are not equal
 
 # Logical operators are best when used with 'if' statements, and several functions which require a logical argument 
 
+####### Mathematical Operators #######
+
+# Mathematical operators are just like you remember in high school
+
+# Addition:       '+'
+# Subtraction:    '-'
+# Division:       '/'
+# Multiplication: '*'
+# Exponent:       '^'
+
+2+2   # returns 4
+12/3  # also retuns 4
+2^3   # returns 8
+
+# there's also a different one called modulo
+# Modulo:         '%%'
+
+# Modulo is a special operator which checks if there's a remainder after a division. It's best use is to check if a number
+# is even or odd (since an even number has a 0 remainder)
+
+24 %% 2 # this returns 0, since 24 is even there is no remainder
+23 %% 2 # this returns 1
+
+# its really useful if used like this
+num1 <- 24
+num2 <- 13
+# checks if num1 variable is even or odd
+if(num1 %% 2==0){
+  print("This is even")
+}else{
+  print("This is odd")
+}
+# now num2
+if(num2 %% 2==0){
+  print("This is even")
+}else{
+  print("This is odd")
+}
+
+
+# Order of operations are still a thing here, and they're exactly the same as in high school
+PEMDAS
+# Parentheses
+# Exponent
+# Multiplication
+# Division
+# Addition
+# Subtraction
