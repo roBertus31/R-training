@@ -117,3 +117,57 @@ bool
 
 
 #=================================================================================================================#
+#                                                                                                                 #
+#                                             Operators                                                           #
+#                                                                                                                 #
+#=================================================================================================================#
+
+#' Operators are what's used in any programming language to do the things that you want the program to actually do.
+#' Some examples are assignment operators which assign a value to a variable or some other object. There's logical 
+#' comparison operators in order to find out if some sort of condition is TRUE or FALSE. Then there's mathematical
+#' operators which will do all the maths. Oh, dear maths.
+
+####### Assignment Operators #######
+
+# We've already encountered the 'gets' operator '<-'. The gets operator is a uniquely R'esque operator. Every other
+# programming language just uses a simple equal symbol. In R however, there's some subtle differences between the two.
+# in most situations they can be interchangable. Say for instance, you're created a loop that will iterate a bunch of
+# times over a column of data in a table. For each iteration of that loop, you need to store the output of that loop 
+# somewhere to use later. If you were to use the '<-' to store that output data, R will end up over-writing the previous
+# data with each iteration. R knows this ahead of time, so if you tried to use a '<-' to do what was described you'll get 
+# an error. Instead, you should use the '=' operator which will assign data differently than how a '<-' assigns data.
+
+# the '<-' always points to the right for assignment. If you point it to the left, if does a completely different 
+# task called 'depackaging' which is a bit beyond the scope of this tutorial. If data science and machine learning
+# are interesting for you, you'll definitely use a 'depackage' operator for deep-learning and neural networks.
+
+newVar <- c(1:10)
+newVar                # Either operator will accomplish the same task in this case
+
+newNewVar = c(1:10)
+newNewVar
+
+
+####### Logical Operators #######
+
+# Quite often you'll need to compare two or more things to each other to answer some sort of yes/no question.
+# Ex. 
+# Does this farm have a product formula in the database?
+# Are there more E. coli isolates than C. perf isolates?
+# Does this company have more than one complex?
+
+# In order to do this we use logical comparison operators. They look just like math operators but have slightly different meanings
+
+# Greater than:             '>'
+# Less than:                '<'
+# Exactly equal to:         '=='
+# Greater than or equal to: '>='
+# Less than or equal to:    '<='
+# Not equal to:             '!='
+
+3 > 4 # evaluates to FALSE 
+TRUE != FALSE # evaluates to TRUE because they are not equal
+3 != 4        # also evaluates to TRUE
+
+# Logical operators are best when used with 'if' statements, and several functions which require a logical argument 
+
