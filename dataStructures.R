@@ -68,7 +68,7 @@ vect7
 length(vect7)
 
 #' Matrices are essentially a 2-dimensional vector. Generally, the equivalent of what we would call a table.
-#' There's a length component, as well as a 'depth' or 'height' component, if you will. Each column of a matrix
+#' There's a length component, as well as a 'depth' or 'height' component, if you will. Each row of a matrix
 #' is a single vector, as well as each column. We can easily create a generic matrix with the matrix() function
 
 matrix(1:9, nrow = 3, ncol = 3)
