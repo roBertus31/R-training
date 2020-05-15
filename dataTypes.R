@@ -131,7 +131,7 @@ bool
 
 # We've already encountered the 'gets' operator '<-'. The gets operator is a uniquely R'esque operator. Every other
 # programming language just uses a simple equal symbol. In R however, there's some subtle differences between the two.
-# in most situations they can be interchangable. Say for instance, you're created a loop that will iterate a bunch of
+# in most situations they can be interchangable. Say for instance, you've created a loop that will iterate a bunch of
 # times over a column of data in a table. For each iteration of that loop, you need to store the output of that loop 
 # somewhere to use later. If you were to use the '<-' to store that output data, R will end up over-writing the previous
 # data with each iteration. R knows this ahead of time, so if you tried to use a '<-' to do what was described you'll get 
