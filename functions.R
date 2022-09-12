@@ -28,7 +28,7 @@
 # function is named, what it does, and what it gives back to the programmer. 
 # That's why in python you define a function using the keyword 'def'
 
-addingFunc <- function(x, y){  # instead of 'def' we use a gets operator, with the name of the function you define.     
+addingFunc <- function(x, y){  # instead of 'def' we use the assignment operator (the "gets"), with the name of the function you define.     
                                # Inside the parentheses, after the function name are the arguments that you want the 
                                # function to do something to. Put the instructions you want the function to 
                                # perform inside curly brackets {}
@@ -43,22 +43,27 @@ addingFunc(1, 2)   # the function outputs 3
 addingFunc(25, 2)  # the function outputs 27  
 addingFunc(200000000000000000000000, 2000000000000000000000)   # the function outputs 2.02e+23
 
+# Notice that when you ran the code to define the function, it was stored into your R-environment, but no 
+# code within the function was actually executed. Once you've defined a function, you'll need to explicitly call that function to 
+# make it do what it is you want it to do. In this case we called the function three times on lines
+# 42, 43, and 44.
+
 
 #' Some rules to follow with writing and using functions
 #' 
 #' 1. Each function should only do one job
 #'    It can be tempting to write a single function that will do the entire process that you're trying to code.
 #'    While that's absolutely possible, it's just not a good idea. If one part of the function doesn't work
-#'    then it's even harder to figure out which part doesn't work
+#'    then it's even harder to figure out which part was broken.
 #'
 #' 2. Bugs will always happen. It's unavoidable.
 #'    Without fail, the functions you write will at one point or another have unintended consequences. The 
-#'    best way to combat this is to write clean code, meaning each function does one job, it's well annotated
-#'    with comments (lines that start with the # character to describe the intended behavior), it's spaced in 
-#'    a way that it's almost human-readable text.
+#'    best way to combat this is to write clean code, meaning each function does one job, each function is
+#'    well annotated with comments (lines that start with the # character to describe the intended behavior), 
+#'    it's spaced in a way that it's almost human-readable text.
 #'    
 #' 3. Use additional # characters to make it easier to see where different functions occur in your code.
-#'    I use three lines of # characters at the beginning and end of each function to make it easier to read
+#'    I use three lines filled with '#' characters at the beginning and end of each function to make it easier to read
 #'    
 #'    Example:
 ######################################################################################
@@ -131,10 +136,10 @@ saySomething <- function(text1, text2){
 
 
 #' The most important part of knowing what keywords are functions, and which are not is the use of
-#' parenthses. Any time you call, or use, a function you type the name of that function,
-#' then use parenthses to enter your input arguments, each argument is separated by a comma.
+#' parentheses. Any time you call, or use, a function you type the name of that function,
+#' then use parentheses to enter your input arguments, each argument is separated by a comma.
  
-# func. name   arg1          arg 2
+# func. name   arg 1        arg 2
 saySomething("Whatchu", "talkin' bout!") 
 
 # some functions are super complex! This is the ifelse() function in base R. It's also
@@ -191,7 +196,7 @@ function (test, yes, no)
 #' bottom right of the Rstudio IDE explaining the function. Any developer worth their weight will
 #' have documented all of their functions before they release their code for programmers to use.
 
-# Example: Copy and paste the lines below into the console and press enter . . . 
+# Example: Copy and paste the lines below into the console and press enter, or run them line-by-line . . . 
 
 ?ifelse
 ?dplyr::mutate

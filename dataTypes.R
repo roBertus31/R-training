@@ -1,7 +1,5 @@
 
 
-
-
 #====================================================#
 ########             R data types             ########
 #====================================================#
@@ -30,6 +28,24 @@
 # is entered inside the parentheses, and each value is separated
 # by commas. Commas will always separate different values you are using 
 # for all function calls in R
+
+# Rstudio has a great feature allowing the user to run code in this (or any) text
+# file within the currently running R-session. There's two ways to do this.
+# 
+# 1. Use the mouse to highlight the code you want to run. Then in the top right 
+#    of this window (your text editor window) there will be a button that says,
+#    "Run", or use the keyboard shortcut, "CTRL + ENTER". Click that and the 
+#    highlighted code will be the only thing that executes.
+# 
+# 2. Alternatively If you want to run an entire line of code, you can simply
+#    make sure that your cursor is on the line that you want to run, then click
+#    the "Run" button again, or use the keyboard shortcut. 
+# 
+# Both of these methods are also able to be completed by using the keyboard 
+# shortcut for the "Run" button, "CTRL + ENTER".
+
+# run the following line first to allow easier navigation through this tutorial
+require("rstudioapi")
 
 nums <- c(5, 10, 15, 20, 25, 30)  # create the vector data structure, and store it in a variable called 'nums'
 typeof(nums)                      # what data type is contained within the 'nums' variable?
@@ -129,7 +145,7 @@ bool
 
 ####### Assignment Operators #######
 
-# We've already encountered the 'gets' operator '<-'. The gets operator is a uniquely R'esque operator. Every other
+# We've already encountered the assignment operator '<-'. The assignment operator is a uniquely R'esque operator. Every other
 # programming language just uses a simple equal symbol. In R however, there's some subtle differences between the two.
 # in most situations they can be interchangable. Say for instance, you've created a loop that will iterate a bunch of
 # times over a column of data in a table. For each iteration of that loop, you need to store the output of that loop 
@@ -219,3 +235,9 @@ PEMDAS
 # Division
 # Addition
 # Subtraction
+
+# Once you've finished this file, run the lines below to clean up the R-environment navigate to the next 
+# file in this training series...
+
+rm(list = ls())
+rstudioapi::navigateToFile( "dataStructures.R" )

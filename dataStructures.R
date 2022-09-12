@@ -259,12 +259,13 @@ dfPos <- df[grep("technician", df$Position, ignore.case = TRUE),]
 
 # There's a couple ways to include code from an outside package. The first is to use the function library(). This will
 # load that package in it's entirety, even the parts that you won't need at that time. 
-library(<package name>)
+
+library(<package name>) # if you run this line, there will be an error. That's ok.
 ?library
 
 # If you only need one function you can use a double-colon along with the package name to just get that one function
 
-dplyr::filter()
+dplyr::filter()  # if you run this line, there will be an error. That's ok.
 ?dplyr::filter
 
 # The filter function is a super useful tool, it's used often and heavily
@@ -273,3 +274,9 @@ dplyr::filter(df, Position == "Technician")  # the argurments to filter() also n
 dplyr::filter(df, Exp >= 3)                  # evaluate to either TRUE or FALSE. filter() is, however, case sensitive
                                              # so you'll need to know whether you're looking for upper or lower case spellings.
                                              # Notice that filter() works on both character and numeric data.
+
+# Once you've finished this file, run the lines below to clean up the R-environment navigate to the next 
+# file in this training series...
+
+rm(list = ls())
+rstudioapi::navigateToFile( "FlowControl.R" )

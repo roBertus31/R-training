@@ -53,15 +53,26 @@ for(i in data){
   }
 }
 print(numTrue)
+
+# this loop goes cycles through the vector 'data', and uses the modulo operator to determine if 
+# the current element in the 'data' vector is even or not. If it is even, then it will increment
+# the 'numTrue' variable, essentially a counter for the number of even numbers that the loop
+# has encountered. The output from 'print(numTrue)' shows that there were 4 even elements in 
+# the 'data' vector, which is what we expected.
  
 # another really easy way to accomplish what we just did is to use the ifelse() function
 
 numTrue <- ifelse(data%%2==0, 1, 0)  # ifelse() follows this syntax ifelse(condition, if true do this, if false do this)
 sum(numTrue)
 
+# The difference here is that the 'ifelse' function will return a vector also, and it will be the exact same 
+# length, or size, as the input vector. If we wanted to only know the total number of even elements in 
+# 'data', then we need to use the 'sum' function to add up all of the 1s that were in the output 
+# vector
+
 # the for loop allowed us to specify a set number of times to do a task. The ifelse() function has
 # that capability built in. It's what's called vectorized in R jargon.
-
+rm(list = ls())
 ########### the 'while' loop ###########
 
 # The while loop will evaluate what is in the parentheses, and see if that statement is TRUE. If the statement
@@ -83,7 +94,7 @@ while(i < 10){
   i = i + 1
 }
 
-# notice it only printed to 9. That's because i reached the value of 10 and is no longer less than 10
+# notice it only printed to 9. That's because i reached the value of 10 and is therfore no longer less than 10
 # if we want 10 to print then we need to change the loop
 
 i <- 1
@@ -101,7 +112,9 @@ while(i > 10){
   i = i + 1
 }
 
-# this loop will repeat infinitely since the value of i will always be greater than 10
+# this loop will repeat infinitely since the value of i will always be greater than 10.
+# to stop the loop, click the stop-sign in the upper right of the console window.
+
 
 
 #============================================================================================================#
@@ -127,14 +140,16 @@ if(condition to test){
   }
 
 # Earlier we saw an example of 'if' and the ifelse() function. The biggest difference between these two
-# is that 'if' will only check the condition once. Ifelse() on the other hand is vectorized. This means 
+# is that 'if' will only check for the condition once, and only once. Ifelse() on the other hand is vectorized. This means 
 # that if you need to perform that 'if' condition test repeatedly you won't need to put your 'if' statement
 # into a 'for' loop in order to check each element in a data structure.
 
+set.seed(123)
 colA <- rnorm(n = 10, mean = 10, sd = 0.5)
 colB <- rnorm(n = 10, mean = 10, sd = 0.5)
 
 df <- as.data.frame(cbind(colA, colB))
+df
 
 # using If statement
 if(df$colA < 10){
@@ -144,10 +159,11 @@ if(df$colA < 10){
 }
 
 df
-# notice that the new column is entirely "not less". This is because the 'if' statement that we wrote
-# only evaluates the first element, in this case 10.236992. This is not less than 10, and so the if 
+# notice that the new column is entirely "less" and you should have received a warning statement in the console about only the
+# the first element was used. This is because the 'if' statement that we wrote
+# only evaluates the first comparison we send to it. This is less than 10, and so the if 
 # statement executes the code in the first curly brackets. However, the 'if' statement doesn't evaulate 
-# again for any other element in that column, and so all of the new column is "not less".
+# again for any other element in that column, and so all of the new column is filled with "less".
 
 # in order for each element of that column to be evaluated for the 'if' statement, we need to use the 
 # vectorized ifelse() function.
@@ -157,8 +173,14 @@ df
 # now we see that each value of that column was evaluated correctly
 
 # basic syntax for ifelse()
-ifelse(Condition to test, code if true, code if false)
+ifelse(<Condition to test>, <code if true>, <code if false>)
 
 # there's also a repeat loop. However it's not a good idea to use it. I've never seen it used, and have
 # never used it. It's really a relic of very old versions of R, and is probably going to be discontinued
 # in future releases. I'm not even going to cover it in this tutorial.
+
+# Once you've finished this file, run the lines below to clean up the R-environment navigate to the next 
+# file in this training series...
+
+rm(list = ls())
+rstudioapi::navigateToFile( "functions.R" )
