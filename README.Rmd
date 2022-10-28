@@ -1,0 +1,25 @@
+---
+title: "README"
+output:
+  github_document:
+  html_preview: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R-Training
+
+The code in this repository is a set of files meant for beginners to learn the fundamentals of writing R code. The important part is to make sure you have R and Rstudio installed on your local machine, or have access to an Rstudio server instance. 
+
+### Installing R and Rstudio:
+There are many versions of R. For this training, it doesn't matter which version you use. However, depending on the project(s) you become involved with in the future, the R version may matter. There are ways to deal with this, but that is beyond the scope of this training.
+
+* To install R to your local machine follow [this link](https://cran.r-project.org/) for the most recent release, and click the link corresponding to the operating system your computer is running on.
+
+* To install Rstudio on your local machine follow [this link](https://www.rstudio.com/products/rstudio/download/) and download Rstudio Desktop. If you're using Rstudio Server, and you are already able to access Rstudio Server through your browser, then no downloading or installation will be necessary.
+
+**Note** If downloading and installing on your local machine you will need admin rights for that machine.
+
+Once everything is installed and working, navigate to the file `dataStructures.R` to begin.

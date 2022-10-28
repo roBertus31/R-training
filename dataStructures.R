@@ -4,6 +4,16 @@
 #' In the data types file, vectors (or atomic vectors for uber correctness) were briefly mentioned.
 #' Now we'll explore vectors and other data structures more deeply. This is not a comprehensive
 #' look at ALL of the data structures available in R, only the ones that will be encountered the most.
+#' 
+
+# In order to more easily navigate through these files, we'll need to install something called 
+# a package. Simply run the line below and wait for it to finish, and then carry on with the 
+# rest of this file.
+
+if(!any(grepl("rstudioapi", rownames(installed.packages())))){
+  install.packages("rstudioapi")
+}
+
 
 
 ########## Vectors ##########
