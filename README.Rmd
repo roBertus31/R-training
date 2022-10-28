@@ -2,7 +2,7 @@
 title: "README"
 output:
   github_document:
-  html_preview: false
+    html_preview: false
 ---
 
 ```{r setup, include=FALSE}
@@ -22,4 +22,4 @@ There are many versions of R. For this training, it doesn't matter which version
 
 **Note** If downloading and installing on your local machine you will need admin rights for that machine.
 
-Once everything is installed and working, navigate to the file `dataStructures.R` to begin.
+Once everything is installed and working, navigate to the file `dataTypes.R` to begin.

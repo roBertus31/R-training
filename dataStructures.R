@@ -10,9 +10,6 @@
 # a package. Simply run the line below and wait for it to finish, and then carry on with the 
 # rest of this file.
 
-if(!any(grepl("rstudioapi", rownames(installed.packages())))){
-  install.packages("rstudioapi")
-}
 
 
 

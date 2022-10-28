@@ -30,4 +30,4 @@ deal with this, but that is beyond the scope of this training.
 need admin rights for that machine.
 
 Once everything is installed and working, navigate to the file
-`dataStructures.R` to begin.
+`dataTypes.R` to begin.
